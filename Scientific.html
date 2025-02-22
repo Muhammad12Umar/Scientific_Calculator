@@ -12,9 +12,11 @@
             align-items: center;
             height: 100vh;
             background-color: #f4f4f4;
+            margin: 0;
         }
         .calculator {
-            width: 500px;
+            width: 90%;
+            max-width: 400px;
             background: #222;
             padding: 20px;
             border-radius: 10px;
@@ -34,8 +36,8 @@
         }
         .buttons {
             display: grid;
-            grid-template-columns: repeat(5, 2fr);
-            gap:12px;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 10px;
         }
         button {
             padding: 15px;
@@ -54,6 +56,12 @@
         }
         .equal:hover {
             background: #e08900;
+        }
+        @media (max-width: 480px) {
+            button {
+                font-size: 1em;
+                padding: 10px;
+            }
         }
     </style>
 </head>
